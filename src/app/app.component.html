@@ -1,0 +1,9 @@
+<ngx-ui-loader text="please wait..."></ngx-ui-loader>
+
+<div class="flex h-screen">
+  <app-sidebar></app-sidebar>
+
+  <div ngxUiLoaderBlurred (blur)="(10)" class="flex-grow">
+    <router-outlet></router-outlet>
+  </div>
+</div>

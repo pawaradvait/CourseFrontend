@@ -1,0 +1,51 @@
+<nav class="sidebar bg-white shadow-lg min-h-screen w-64">
+  <div class="sidebar-top p-4">
+    <a href="#" class="logo__wrapper flex items-center justify-center">
+      <img src="assets/images/ad.jpg" class="logo w-32" alt="Logo" />
+    </a>
+  </div>
+  <div class="p-4 mt-8">
+    <ul>
+      <li class="mb-4">
+        <a
+          [routerLink]="'/add-course'"
+          title="Add Courses"
+          class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          <i class="fa-solid fa-plus mr-3 text-lg"></i>
+          <span class="link text-md font-medium">Add Courses</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a
+          [routerLink]="'/list-course'"
+          title="List Courses"
+          class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          <i class="fa-solid fa-list mr-3 text-lg"></i>
+          <span class="link text-md font-medium">List Courses</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a
+          [routerLink]="'/add-courseInstance'"
+          title="Add Instances"
+          class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          <i class="fa-solid fa-plus mr-3 text-lg"></i>
+          <span class="link text-md font-medium">Add Instances</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a
+          [routerLink]="'/list-courseInstance'"
+          title="List Instances"
+          class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          <i class="fa-solid fa-list mr-3 text-lg"></i>
+          <span class="link text-md font-medium">List Instances</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

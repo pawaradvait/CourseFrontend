@@ -1,0 +1,67 @@
+<!-- Right Side Content Section -->
+<section class="p-8 bg-gray-100 min-h-screen">
+  <!-- Form for Adding a Course Instance -->
+  <form
+    class="form-card bg-white shadow-md rounded-lg p-6 max-w-xl mx-auto"
+    id="add-course-form"
+    (ngSubmit)="courseInstanceadding()"
+  >
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+      Add a New Course Instance
+    </h2>
+    <div class="form-group mb-4">
+      <label
+        for="courseInstance-year"
+        class="block text-sm font-medium text-gray-700 mb-2"
+        >Year:</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="courseInstance.year"
+        id="courseInstance-year"
+        name="courseInstanceYear"
+        placeholder="Year"
+        required
+        class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label
+        for="courseInstance-delivery"
+        class="block text-sm font-medium text-gray-700 mb-2"
+        >Delivery:</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="courseInstance.delivery"
+        id="courseInstance-delivery"
+        name="courseInstanceDelivery"
+        placeholder="Delivery"
+        required
+        class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label for="courseid" class="block text-sm font-medium text-gray-700 mb-2"
+        >Course:</label
+      >
+      <select
+        id="courseid"
+        [(ngModel)]="courseInstance.course.id"
+        name="courseId"
+        required
+        class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option *ngFor="let ida of id" [value]="ida">
+          {{ ida }}
+        </option>
+      </select>
+    </div>
+    <button
+      type="submit"
+      class="submit-btn w-full py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+    >
+      Add Course
+    </button>
+  </form>
+</section>
